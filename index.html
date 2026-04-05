@@ -1,15 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-    <div id="secret" style="display:none; color:red; margin-top:20px;">
-YOU SAW THE FIRE.
-</div>
-    <audio id="bgAudio" autoplay loop>
-    <source src="audio.mp3" type="audio/mpeg">
-</audio>
 <head>
 <meta charset="UTF-8">
 <title>ARCHIVE_RECOVERY</title>
-}
+
 <style>
 body {
     background: black;
@@ -32,7 +26,12 @@ h1 {
 }
 
 /* POSTER */
-<img id="poster" src="poster.png" class="poster">
+.poster {
+    width: 300px;
+    margin: 20px auto;
+    border: 2px solid red;
+    animation: flicker 3s infinite;
+}
 
 @keyframes flicker {
     0%, 100% { opacity: 1; }
@@ -54,47 +53,9 @@ h1 {
     color: white;
     margin-bottom: 10px;
 }
-    <div id="rookFile" class="file" style="display:none;" onclick="toggle('rook')">
-▶ SUBJECT_ROOK [LOCKED]
-</div>
-
-<div id="rook" class="hidden">
-<p>...he saw it...</p>
-<p>...he never spoke...</p>
-<p>...he remembers the fire...</p>
-</div>
 </style>
 </head>
-<script>
-    let clickCount = 0;
 
-document.body.addEventListener("click", () => {
-    clickCount++;
-
-    if (clickCount > 10) {
-        document.getElementById("rookFile").style.display = "block";
-    }
-});
-setInterval(() => {
-    document.body.classList.add("glitching");
-    setTimeout(() => {
-        document.body.classList.remove("glitching");
-    }, 100);
-}, 5000);
-    let poster = document.getElementById("poster");
-
-setInterval(() => {
-    if (Math.random() > 0.7) {
-        poster.src = "shadow.png"; // upload this image next
-        setTimeout(() => {
-            poster.src = "poster.png";
-        }, 200);
-    }
-}, 3000);
-</script>
-    if (clickCount > 20) {
-    document.getElementById("secret").style.display = "block";
-}
 <body>
 
 <h1>ARCHIVE RECOVERY FAILED</h1>
