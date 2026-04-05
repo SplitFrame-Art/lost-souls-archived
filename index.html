@@ -6,42 +6,23 @@
 
 <style>
 body {
-    background: black;
+    background-color: black;
     color: #00ff9f;
-    font-family: monospace;
+    font-family: "Courier New", monospace;
     padding: 20px;
-    text-align: center;
+    overflow: hidden;
 }
 
-/* GLITCH TITLE */
 h1 {
+    text-align: center;
     color: red;
-    animation: glitch 0.2s infinite;
+    letter-spacing: 2px;
 }
 
-@keyframes glitch {
-    0% { transform: translate(1px, -1px); }
-    50% { transform: translate(-1px, 1px); }
-    100% { transform: translate(1px, 1px); }
-}
-
-/* POSTER */
-.poster {
-    width: 300px;
-    margin: 20px auto;
-    border: 2px solid red;
-    animation: flicker 3s infinite;
-}
-
-@keyframes flicker {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.6; }
-}
-
-/* FILES */
 .file {
     margin: 15px 0;
     cursor: pointer;
+    transition: 0.2s;
 }
 
 .file:hover {
@@ -50,57 +31,74 @@ h1 {
 
 .hidden {
     display: none;
+    margin-top: 10px;
     color: white;
-    margin-bottom: 10px;
+}
+
+.glitch {
+    animation: glitch 0.2s infinite;
+}
+
+@keyframes glitch {
+    0% { transform: translate(1px, -1px); }
+    25% { transform: translate(-1px, 2px); }
+    50% { transform: translate(2px, 1px); }
+    75% { transform: translate(-2px, -1px); }
+    100% { transform: translate(1px, 2px); }
 }
 </style>
 </head>
 
 <body>
 
-<h1>ARCHIVE RECOVERY FAILED</h1>
+<h1 class="glitch">ARCHIVE RECOVERY FAILED</h1>
 
 <p>> Restoring fragments...</p>
 <p>> Source: Saint Blythe’s Asylum</p>
-<p>> Status: CORRUPTED</p>
-
-<!-- 🔥 YOUR POSTER -->
-<img src="poster.png" class="poster">
+<p>> Status: PARTIALLY CORRUPTED</p>
 
 <hr>
 
 <div class="file" onclick="toggle('reel')">▶ REEL_01_CORRUPTED</div>
 <div id="reel" class="hidden">
-<p>...a figure hands something over...</p>
-<p>...fire detected...</p>
-<p>...SECOND SUBJECT OBSERVING...</p>
+    <p>[VIDEO DATA MISSING]</p>
+    <p>...a figure hands something over...</p>
+    <p>...fire detected...</p>
+    <p>...SECOND SUBJECT OBSERVING...</p>
 </div>
 
 <div class="file" onclick="toggle('blythe')">▶ PATIENT_LOG_BLYTHE</div>
 <div id="blythe" class="hidden">
-<p>"The mind can be rewritten."</p>
-<p>"Identity is unstable."</p>
-<p>Subject Shadow shows independence.</p>
+    <p>Dr. Lora Blythe - Lead Director</p>
+    <p>"The mind can be rewritten."</p>
+    <p>"Identity is the root of instability."</p>
+    <p>Final note: SUBJECT SHADOW shows unexpected independence.</p>
 </div>
 
 <div class="file" onclick="toggle('shadow')">▶ SUBJECT_SHADOW</div>
 <div id="shadow" class="hidden">
-<p>Exists across multiple states.</p>
-<p>Uncontrollable.</p>
-<p>Watching.</p>
+    <p>Status: UNSTABLE</p>
+    <p>Exists across multiple states simultaneously</p>
+    <p>Does not respond to control measures</p>
+    <p>Behavior: Protective... or predatory?</p>
 </div>
 
 <hr>
 
 <p style="color:red;">
-LOST SOULS: STITCHES IN THE DARK<br>
+LOST SOULS: STITCHES IN THE DARK  
+<br>
 by Split Frame Entertainment
 </p>
 
 <script>
 function toggle(id) {
-    let el = document.getElementById(id);
-    el.style.display = el.style.display === "block" ? "none" : "block";
+    var x = document.getElementById(id);
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
 }
 </script>
 
