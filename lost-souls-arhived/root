@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SPLIT FRAME</title>
+<style>
+body {
+    background:black;
+    color:white;
+    font-family: monospace;
+    text-align:center;
+    padding-top:100px;
+}
+
+.glitch {
+    color:red;
+    animation: flicker 1s infinite;
+}
+
+@keyframes flicker {
+    0% { opacity:1; }
+    50% { opacity:0.4; }
+    100% { opacity:1; }
+}
+
+a {
+    color:#00ff9f;
+    text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<h1 class="glitch">PROJECT: SPLIT FRAME</h1>
+
+<p>Transmission detected.</p>
+<p>Archive unstable.</p>
+
+<a href="/lost-souls-arhived/">ENTER ARCHIVE</a>
+
+</body>
+</html>
