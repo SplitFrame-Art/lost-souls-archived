@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SUBJECT ROOT</title>
+<style>
+body {
+    background:black;
+    color:red;
+    font-family: monospace;
+    text-align:center;
+    padding-top:80px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>ACCESS GRANTED</h1>
+
+<p>SUBJECT FILES UNLOCKED</p>
+
+<p>WARNING: OBSERVATION ACTIVE</p>
+
+<a href="/lost-souls-arhived/">RETURN</a>
+
+</body>
+</html>
